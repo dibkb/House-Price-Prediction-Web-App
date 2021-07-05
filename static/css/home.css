@@ -69,8 +69,22 @@ li,a{
    border: 2.7px solid #fff;
    position: relative;
    /* visibility: hidden; */
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
 }
 
+.img_credit{
+   background: transparent;
+   font-size: 12px;
+   font-family: var(--font-poppins);
+   padding: 0 3% 1% 0;
+}
+.img_credit:hover,.img_credit:focus{
+   text-decoration: underline;
+   filter: brightness(120%);
+
+}
 
 
 
@@ -233,7 +247,7 @@ li,a{
       margin-left: -6.62vw;
       margin-right: -6.62vw;
       max-width: 100vw;
-      min-height: 321px;
+      /* min-height: 321px; */
 
    }
    .img_container::after{

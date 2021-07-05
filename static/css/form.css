@@ -21,6 +21,9 @@
    transition-timing-function: ease-in;
    background-color: var(--background);
 }
+li,a{
+   text-decoration: none;
+}
 
 html,body{
    overflow-x: hidden;
@@ -91,13 +94,29 @@ html,body{
 }
 .img-container{
    max-width: 100%;
-   background-image: url(/static/images/pexels-patryk-kamenczak-775219.jpg);
+   background-image: url(/static/images/roberto-nickson-tleCJiDOri0-unsplash.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position:50%;
    border-radius: 12px;
    border: 2.7px solid #fff;
    flex-basis: 56%;
+
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+}
+
+.img_credit{
+   background: transparent;
+   font-size: 12px;
+   font-family: var(--font-poppins);
+   padding: 0 3% 1% 0;
+}
+.img_credit:hover,.img_credit:focus{
+   text-decoration: underline;
+   filter: brightness(120%);
+
 }
 
 /* RIGHT COLUMN */
@@ -287,7 +306,7 @@ input[type='range'] {
    .container {
     margin: 7vh 4.39vw;
     display: grid;
-   grid-template-columns: 1fr; 
+      grid-template-columns: 1fr; 
 
    }
    .heading{
