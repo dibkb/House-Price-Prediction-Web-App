@@ -48,6 +48,14 @@ li,a{
    font-size: 3.5139vw;
    line-height: 4.2vw;
    font-weight: 300;
+
+   /* animation */
+   animation-name:top_load;
+   animation-duration: 2s;
+   animation-timing-function:  ease-in-out;
+   animation-delay: .69s;
+   animation-fill-mode: forwards;
+   opacity: 0;   
 }
 .heading::after{
    content: " DREAM HOUSE.";
@@ -56,6 +64,7 @@ li,a{
    background: -webkit-linear-gradient(0deg,#D74343, #DE7859);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+
 
 }
 .img_container{
@@ -80,10 +89,20 @@ li,a{
    font-size: 12px;
    font-family: var(--font-poppins);
    padding: 0 3% 1% 0;
+   /* transition */
+   transition: .369s 0.1s ease-in;
+   /* animation */
+   animation-name:right_load;
+   animation-duration: 2s;
+   animation-timing-function: cubic-bezier(.31,.72,.93,.41);
+   animation-delay: .69s;
+   animation-fill-mode: forwards;
+   opacity: 0; 
 }
 .img_credit:hover,.img_credit:focus{
    text-decoration: underline;
    filter: brightness(120%);
+
 
 }
 
@@ -129,10 +148,24 @@ li,a{
    background: linear-gradient(90.31deg, #D74343 0.27%, #DE7859 105.14%);
    left: 60%;
    top: 18%;
+   /* transition */
+   transition: .369s 0.1s ease-in,background-color 1s 1s ease;
+   /* animation */
+   animation-name:left_load;
+   animation-duration: .9s;
+   animation-timing-function: ease-out;
+   animation-delay: .3s;
+   animation-fill-mode: forwards;
+   opacity: 0;
+
+
+
 }
-.btn-get-started:hover{
+.btn-get-started:hover,.btn-get-started:focus{
    width: 120%;
    cursor: pointer;
+   background: linear-gradient(270deg, #D74343 0%, #DE7859 99.79%);
+
 }
 .btn-get-started > *{
    background: transparent;
@@ -146,6 +179,13 @@ li,a{
    position: relative;
    grid-area: brand;
    background: transparent;
+   /* animation */
+   animation-name:bottom_load;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-delay: .69s;
+   animation-fill-mode: forwards;
+   opacity: 0
 
 }
 .social{
@@ -159,6 +199,14 @@ li,a{
    top: 50%;
    display: flex;
    right: 0;
+   /* animation */
+   animation-name:bottom_load;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-delay: .69s;
+   animation-fill-mode: forwards;
+   opacity: 0
+
 }
 .social_container> *{
    margin-left: 6vw;
@@ -192,7 +240,101 @@ li,a{
    justify-content: center;
    align-items: center;
    width: 100%;
+   /* animation */
+   animation-name:left_load;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-delay: .69s;
+   animation-fill-mode: forwards;
+   opacity: 0;   
+   
+
+
 }
+
+/* ANIMATIONS AND TRANSITIONS */
+.social_container{
+   background: transparent;
+}
+.social_container i{
+   transition: .369s 0.1s ease-in;
+}
+.social_container i:hover{
+   filter: brightness(118%);
+   transform: scale(1.2) rotate(360deg);
+   
+}
+
+
+
+/* Keyframes */
+@keyframes right_load {
+   from{
+      opacity: 0;
+      transform: translateX(600px);
+   }
+   0%   { opacity: 0; }
+   25% { opacity: .25; }
+   50% { opacity: .50; }
+   75% { opacity: .75; }
+   100% { opacity: 1; }
+   to{
+      opacity: 1;
+   }
+}
+
+@keyframes left_load{
+   from{
+      opacity: 0;
+      transform: translateX(-600px);
+   }
+   0%   { opacity: 0; }
+   25% { opacity: .25; }
+   50% { opacity: .50; }
+   75% { opacity: .75; }
+   100% { opacity: 1; }
+   to{
+   opacity: 1;
+   }
+   
+
+}
+@keyframes top_load{
+   from{
+      opacity: 0;
+      transform: translateY(-600px);
+   }
+   0%   { opacity: 0; }
+   25% { opacity: .25; }
+   50% { opacity: .50; }
+   75% { opacity: .75; }
+   100% { opacity: 1; }
+   to{
+   opacity: 1;
+   }
+
+}
+@keyframes bottom_load{
+   from{
+      opacity: 0;
+      transform: translateY(600px);
+   }
+   0%   { opacity: 0; }
+   25% { opacity: .25; }
+   50% { opacity: .50; }
+   75% { opacity: .75; }
+   100% { opacity: 1; }
+
+   to{
+   opacity: 1;
+   }
+   
+
+}
+
+
+
+
 
 /* Breakpoints */
 
@@ -220,6 +362,8 @@ li,a{
    .brand{
       display: flex;
       justify-self: center;
+      /* animation */
+      animation-name:top_load;
 
    }
    .brand_container{
@@ -297,6 +441,8 @@ li,a{
       font-size: 4.34vw;
    }
 
+
+
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
    .container{
@@ -326,6 +472,8 @@ li,a{
    .brand{
       display: flex;
       justify-self: center;
+      /* animation */
+      animation-name:top_load;
 
    }
    .brand_container{
@@ -370,6 +518,8 @@ li,a{
    .paragraph{
       font-size: 1.3vw;
       line-height: 27px;
+      /* animation */
+      animation-name:right_load;
    }
    .social{
       position: static;

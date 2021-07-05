@@ -45,6 +45,13 @@
   /* Button */
   .btn_container{
      margin: 6vw 0;
+      /* animation */
+      animation-name:bottom_load;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-delay: .369s;
+      animation-fill-mode: forwards;
+      opacity: 0; 
   }
   .result-btn{
      height: 12vw;
