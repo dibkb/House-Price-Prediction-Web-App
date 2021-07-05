@@ -72,6 +72,7 @@ li,a{
    display: flex;
    justify-content: flex-end;
    align-items: flex-end;
+
 }
 
 .img_credit{
@@ -244,8 +245,8 @@ li,a{
       border: none;
       border-radius: 0;
       background-position: 50% 50%;
-      margin-left: -6.62vw;
-      margin-right: -6.62vw;
+      margin-left: -3.367vw;
+      margin-right: -3.367vw;
       max-width: 100vw;
       /* min-height: 321px; */
 
