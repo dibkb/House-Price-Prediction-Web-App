@@ -123,9 +123,11 @@ html,body{
 
 .col_right{
    display: flex;
+   margin: 0 auto ;
    flex-direction: column;
    font-family: var(--font-poppins);
    min-width: 420px;
+   max-width: 450px;
 }
 .h-right{
    text-align: center;
@@ -134,22 +136,24 @@ html,body{
    font-weight: 400;
 }
 form{
-   height: 90%;
-   display: flex;
+   height: 100%;
+   display: flex; 
    flex-direction: column;
-   justify-content: space-between;
+
 }
 /* FORM */
-/* input, input:focus{
-   outline: none;
-   border: none;
+/* form > input{
+
+
 } */
+
+
 
 .rang_inputs{
    flex-basis: 72%;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-around;
    width: 100%;
 }
 input[type = 'range']{
@@ -184,13 +188,14 @@ form label,form p{
 }
 
 /* Range Labels */
-
-
+.area_income_filed input, .area_population_filed input{
+   width: 81%;
+}
 
 
 /* button */
 .btn_container{
-   flex-basis: 17%;
+   justify-self: flex-end;
    display: flex;
    align-items: flex-end;
 }
@@ -201,17 +206,16 @@ form label,form p{
    font-family: var(--font-poppins);
    align-items: center;
    justify-content: space-between;
-   padding: 0 9%;
-   height: 52%;
+   padding: 18px 18px;
    border-radius: 12px;
    background: linear-gradient(90.31deg, #D74343 0.27%, #DE7859 105.14%);
    border: none;
 
 }
-.result-btn:hover{
+.result-btn:hover,.result-btn:focus{
    cursor: pointer;
+   padding: 18px 27px;
    width: 100%;
-   padding: 0 13%;
 }
 .btn-get-started-link{
    font-size: 1.17vw;
@@ -351,7 +355,7 @@ input[type='range'] {
    .btn-get-started > *{
       background: transparent;
    }
-   .btn-get-started:hover{
+   .btn-get-started:hover, .btn-get-started:focus{
       width: 100%;
       padding: 0 11%;
 
@@ -374,9 +378,11 @@ input[type='range'] {
        min-height: 712px;
        justify-content: space-around;
     }
-    .col_left >*{
+    .col_right{
+       min-height: 810px;
+       max-width: 90vw;
+    }
 
-    } 
    .col_left .img-container{
       min-height: 50%;
 
@@ -390,9 +396,9 @@ input[type='range'] {
       line-height: 2.34vw;
    }
    form{
-      width: 60%;
-      margin: 0 auto;
+      max-width: 450px;
    }
+
    .name_field input{
       height: 5.85vw;
       font-size: 3.1vw;
@@ -400,12 +406,19 @@ input[type='range'] {
    .h-right{
       font-size: 4.1vw;
    }
+   .btn_container{
+      margin-top: 3%;
+   }
    .btn_container .btn-get-started-link{
       font-size: 2vw;
    }
    .arrow{
       width: 6vw;
    }
+   /* Range Labels */
+   /* .area_income_filed input, .area_population_filed input{
+      width: 81%;
+   } */
 
 
  }

@@ -36,9 +36,9 @@
   .rang_inputs > *{
      margin-bottom: 9%;
   }
-  .area_income_filed, .area_population_filed{
+  /* .area_income_filed, .area_population_filed{
      margin: 3% auto;
-  }
+  } */
   .area_income_filed input, .area_population_filed input{
      width: 72%;
   }
