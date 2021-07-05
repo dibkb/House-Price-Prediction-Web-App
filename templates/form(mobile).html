@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="/static/images/favicon-96x96.png">
+   <!-- CSS -->
+   <link rel="stylesheet" href="/static/css/form.css">
+   <link rel="stylesheet" href="/static/css/form(mobile).css">
+   <title>Help us find your home</title>
+</head>
+<body>
+   <div class="container">
+      <div class="col_left">
+         <div class="heading">
+            <h3 class="h-1">Help us find the</h3>
+            <h3 class="h-2">for you and</h3>
+         </div>
+         <p class="prargraph">Venenatis sem vulputate tellus nunc suscipit ac risus quis. Fermentum eleifend enim ut phasellus diam auctor. Nec vitae vitae ultricies nunc, in sed in semper. Suspendisse tortor ac sed pulvinar in mattis tincidunt nulla mauris. Leo quis quis ultricies tempor venenatis. Tincidunt cras dolor commodo sagittis orci. Fusce curabitur accumsan justo facilisi ut lectus nisl quis faucibus. Id scelerisque id vitae purus. Netus lectus nunc elit ac. Maecenas ultricies nam sit egestas ante feugiat lobortis bibendum at. Sed purus in erat laoreet ac egestas lectus. 
+         </p>
+         <div class="img-container"></div>
+         <div class="cta-btn cta-btn-mobile">
+            <a class="btn-get-started" href="#">
+               <span class="btn-get-started-link">Enter your preferences</span>
+               <img src="/static/images/arrow.svg" alt="" class="arrow">
+            </a>
+         </div>
+      </div>   
+         <div class="col_right">
+            <h1 class="h-right">ENTER YOUR PREFERENCES</h1>
+            <form method="POST">
+               <div class="name_field">
+                  <label for="name">Enter your name</label><br>
+                  <input type="text" id="name" name="name"><br>
+               </div>
+               <div class="rang_inputs range-wrap">
+                  <div class="age_filed">
+                     <p>House age</p>
+                     0 <input type="range" min="1" max="100" value="50" class="range"
+                     style="display:inline-block; vertical-align:middle"
+                     > 20
+                     <output class="bubble"></output>
+                  </div>
+                  <div class="room_filed range-wrap">
+                     <p>Number of rooms </p>
+                     1 <input type="range" min="1" max="100" value="50" class = 'range'
+                     style="display:inline-block; vertical-align:middle"
+                     > 9
+                     <output class="bubble"></output>
+                  </div>
+                  <div class="bedroom_filed range-wrap">
+                     <p>Number of bedrooms rooms</p>
+                     0 <input type="range" min="1" max="100" value="50" class="range"
+                     style="display:inline-block; vertical-align:middle"
+                     > 6
+                     <output class="bubble"></output>
+                  </div>
+                  <div class="area_income_filed range-wrap">
+                     <p>Average area income (in $)</p>
+                     0 <input type="range" min="1" max="100" value="50" class="range"
+                     style="display:inline-block; vertical-align:middle"
+                     > 100K
+                     <output class="bubble"></output>
+                  </div>
+                  <div class="area_population_filed range-wrap">
+                     <p>Average area population </p>
+                     0 <input type="range" min="1" max="100" value="50" class="range"
+                     style="display:inline-block; vertical-align:middle"
+                     > 200K
+
+                     <output class="bubble"></output>
+                  </div>
+               </div>
+               <div class="btn_container">
+                  <button type="submit" class="cta-btn result-btn">
+                     <span class="btn-get-started-link">View Results</span>
+                     <img src="/static/images/arrow.svg" alt="" class="arrow">
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   <!-- Script -->
+   <script src="/static/js/form.js"></script>
+</body>
+</html>

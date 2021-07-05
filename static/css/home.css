@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400&display=swap');
+
+/* Root variables */
+
+:root{
+   --font-poppins: 'Poppins', sans-serif;
+   --font-quicksand: 'Quicksand', sans-serif;
+   --font-poirer:'Poiret One', cursive;
+   --background : #363636;  
+   --text-color:#fff;
+
+}
+/* Basic Reset */
+
+*,*::after,*::before{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: var(--text-color);
+   transition: 0.21s;
+   transition-timing-function: ease-in;
+   background-color: var(--background);
+}
+body{
+   overflow-x: hidden!important;
+}
+
+li,a{
+   text-decoration: none;
+   list-style: none;
+}
+.container{
+   margin: 5.98vh 3.367vw;
+   display: grid;
+   grid-template-columns: 28.843vw ;
+   grid-template-rows: 1fr 1.2267fr 0.6561fr 0.5927fr;
+   column-gap: 3.6vw;
+   grid-template-areas: 
+   "heading img_container"
+   "paragraph img_container"
+   "cta-btn img_container"
+   "brand social" ;
+   max-height: 90vh;
+}
+.heading{
+   grid-area: heading;
+   font-family: var(--font-poirer);
+   font-size: 3.5139vw;
+   line-height: 4.2vw;
+   font-weight: 300;
+}
+.heading::after{
+   content: " DREAM HOUSE.";
+   font-family: var(--font-poppins);
+   font-weight: 500;
+   background: -webkit-linear-gradient(0deg,#D74343, #DE7859);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+}
+.img_container{
+   max-width: 100%;
+   grid-area: img_container;
+   background-image: url(/static/images/zane-lee-ECsnJcc0Dhs-unsplash.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 30% 30%;
+   border-radius: 12px;
+   border: 2.7px solid #fff;
+   position: relative;
+   /* visibility: hidden; */
+}
+
+
+
+
+.img_container::after{
+   background: none;
+   border-left: 2.7px solid #fff;
+   border-bottom: 2.7px solid #fff;
+   border-radius: 12px;
+   content: "";
+   display: block;
+   position: absolute;
+   top: 2.24vw;
+   left: -2.24vw;
+   right:  2.24vw;
+   bottom: -2.24vw;
+   pointer-events: none;
+}
+
+
+.cta-btn{
+   grid-area: cta-btn;
+   display: block;
+   /* border: 1px solid red; */
+   width: 100%;
+   position: relative;
+   
+}
+.arrow{
+   width: 9%;
+}
+.btn-get-started{
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+   align-items: center;
+   height: 4.1vw;
+   border-radius: 12px;
+   padding: 3%;
+   background: linear-gradient(90.31deg, #D74343 0.27%, #DE7859 105.14%);
+   left: 60%;
+   top: 18%;
+}
+.btn-get-started:hover{
+   width: 120%;
+   cursor: pointer;
+}
+.btn-get-started > *{
+   background: transparent;
+
+}
+.btn-get-started-link{
+   font-size:1.17vw ;
+   font-family: var(--font-poppins);
+}
+.brand{
+   position: relative;
+   grid-area: brand;
+   background: transparent;
+
+}
+.social{
+   position: relative;
+   grid-area: social;
+   background: transparent;
+
+}
+.social_container{
+   position: absolute;
+   top: 50%;
+   display: flex;
+   right: 0;
+}
+.social_container> *{
+   margin-left: 6vw;
+   font-size: 1.34vw;
+
+}
+.brand_container{
+   top: 50%;
+   position: absolute;
+   display: flex;
+   align-items: center;
+}
+.brand_logo{
+   width: 2.39vw;
+   background: transparent;
+}
+.brand_name{
+   font-family: var(--font-poppins);
+   font-size:1.17vw ;
+   margin-left: 12px;
+   background: transparent;
+}
+.paragraph{
+   grid-area: paragraph;
+   font-family: var(--font-quicksand);
+   opacity: 77%;
+   font-weight: 400;
+   font-size: .9vw;
+   line-height: 1.53vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+/* Breakpoints */
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+   body,html{
+      overflow-x: hidden!important;
+   }
+   .container{
+      margin: 2vh 3.367vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1.69fr 3.27fr 0.92fr 3.2346fr 1.2fr;
+      row-gap: 3%;
+      column-gap: 3.6vw;
+      grid-template-areas: 
+      "brand"
+      "heading"
+      "img_container"
+      "cta-btn"      
+      "paragraph"
+      "social";
+      min-height: 120vh;
+   }
+   .brand{
+      display: flex;
+      justify-self: center;
+
+   }
+   .brand_container{
+      position: static;
+      display: flex;
+      justify-content: center;
+
+   }
+
+   .brand .brand_logo{
+      width: 7.729vw;
+
+   }
+   .brand .brand_name{
+      font-size: 3.864vw;
+   }
+   .heading{
+      text-align: center;
+      font-size: 11.59vw;
+      line-height: 12.52vw;
+   }
+   .img_container{
+      border: none;
+      border-radius: 0;
+      background-position: 50% 50%;
+      margin-left: -6.62vw;
+      margin-right: -6.62vw;
+      max-width: 100vw;
+      min-height: 321px;
+
+   }
+   .img_container::after{
+      display: none;
+   }
+   .cta-btn{
+      position: static;
+      display: block;
+      margin: auto;
+   }
+   .btn-get-started{
+      position: static;
+      height: 12.045vw;
+      padding: 0 9%;
+      width: 90%;
+      margin: auto;
+   }
+   .btn-get-started:hover{
+      width: 100%;
+   }
+   .btn-get-started-link{
+      font-size: 3.864vw;
+   }
+   .arrow{
+      width: 8.69vw;
+   }
+   .paragraph{
+      font-size: 2.89vw;
+      line-height: 5vw;
+   }
+   .social{
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+   }
+   .social_container{
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      width: 72%;
+      margin: auto;
+   }
+   .social_container >*{
+      font-size: 4.34vw;
+   }
+
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+   .container{
+      margin: 0 6.367vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1.28362fr 2.6061fr 1.12fr 1.1052fr 1.1052fr;
+      column-gap: 3.6vw;
+      grid-template-areas: 
+      "brand"
+      "heading"
+      "img_container"
+      "cta-btn"
+      "paragraph" 
+      "social"
+      ;
+      min-height: 1080px;
+   }
+   .heading{
+      line-height: 9vw;
+      font-size: 48px;
+      text-align: center;
+   }
+   .img_container{
+      min-height: 425px;
+   }
+   .brand{
+      display: flex;
+      justify-self: center;
+
+   }
+   .brand_container{
+      position: static;
+      display: flex;
+      justify-content: center;
+
+   }
+   .cta-btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .brand .brand_logo{
+      width: 6vw;
+
+   }
+   .brand .brand_name{
+      font-size: 2.7vw;
+   }
+   .btn-get-started{
+      position: static;
+      height: 7.545vw;
+      padding: 0 3%;
+      width: 54%;
+      margin: auto;
+      cursor: pointer;
+   }
+   .btn-get-started:hover{
+      width: 72%;
+   }
+   .btn-get-started-link{
+      font-size: 16px;
+   }
+   .arrow{
+      width: 42px;
+   }
+   .cta-btn{
+      background: transparent;
+   }
+   .paragraph{
+      font-size: 1.3vw;
+      line-height: 27px;
+   }
+   .social{
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+   }
+   .social_container{
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+      margin: auto;
+   }
+   .social_container >*{
+      font-size: 2.34vw;
+   }
+
+}
+
