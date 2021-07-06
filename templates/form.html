@@ -22,7 +22,7 @@
             <a href="https://unsplash.com/photos/tleCJiDOri0" class="img_credit">Image Credits : Unsplash.com</a>
          </div>
          <div class="cta-btn cta-btn-mobile">
-            <a class="btn-get-started" href="#">
+            <a class="btn-get-started" href="{{ url_for('formMobile') }}">
                <span class="btn-get-started-link">Enter your preferences</span>
                <img src="/static/images/arrow.svg" alt="" class="arrow">
             </a>
@@ -33,13 +33,13 @@
             <form method="POST">
                <div class="name_field">
                   <label for="name">Enter your name</label><br>
-                  <input type="text" id="name" name="name"><br>
+                  <input type="text" id="name" name="name" required><br>
                </div>
                <div class="rang_inputs range-wrap">
                   <div class="age_filed">
                      <p>House age (in years)</p>
-                     3 <input type="range" min="3" max="9" value="6" step=".25"
-                     class="range"
+                     3 <input type="range" min="3" max="9" value="6" step=".5"
+                     class="range" name="house_age"
                      style="display:inline-block; vertical-align:middle"
                      > 9
                      <output class="bubble"></output>
@@ -47,7 +47,7 @@
                   <div class="room_filed range-wrap">
                      <p>Number of rooms </p>
                      3 <input type="range" min="3" max="9" value="7" step="1"
-                     class = 'range'
+                     class = 'range' name="rooms"
                      style="display:inline-block; vertical-align:middle"
                      > 9
                      <output class="bubble"></output>
@@ -55,21 +55,21 @@
                   <div class="bedroom_filed range-wrap">
                      <p>Number of bedrooms rooms</p>
                      2 <input type="range" min="2" max="7" value="4" step="1"
-                     class="range"
+                     class="range" name="bed_rooms"
                      style="display:inline-block; vertical-align:middle"
                      > 7
                      <output class="bubble"></output>
                   </div>
                   <div class="area_income_filed range-wrap">
                      <p>Average area income (in $)</p>
-                     37K <input type="range" min="37" max="100" value="69" class="range"
+                     37K <input type="range" min="37" max="100" value="69" class="range" name="area_income"
                      style="display:inline-block; vertical-align:middle"
                      > 100K
                      <output class="bubble"></output>
                   </div>
                   <div class="area_population_filed range-wrap">
                      <p>Average area population </p>
-                     6K <input type="range" min="6" max="100" value="36" class="range"
+                     6K <input type="range" min="6" max="100" value="36" class="range" name="area_population"
                      style="display:inline-block; vertical-align:middle"
                      > 100K
 

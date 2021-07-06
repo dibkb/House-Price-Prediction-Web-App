@@ -16,11 +16,11 @@
    <div class="container">
       <div class="result_container">
          <h1 class="primary_heading">
-            The predicted price of your desired house is  :</h1>
-         <h3 class="result">$ 180,903</h3>
+         <span class="user_name">{{ name.capitalize() }},</span> the predicted price of your desired house is  :</h1>
+         <h3 class="result">{{ pred }}</h3>
          <div class="btn_container">
-            <a href="" class="again_btn">Predict Once Again</a>
-            <a href="" class="home_btn">Go Home</a>
+            <a href="{{url_for('form')}}" class="again_btn">Predict Once Again</a>
+            <a href="{{url_for('home')}}" class="home_btn">Go Home</a>
          </div>
       </div>
       <div class="lower_part">
@@ -30,13 +30,13 @@
             <p>View more details on this <a href="https://www.kaggle.com/dibkb9/usa-housing">Kaggle kernel.</a></p>
          </div>
             <div class="social_container">
-               <a href="" class="social_facebook"><i class="fab fa-facebook-f"></i></a>
-               <a href="" class="social_instagram"><i class="fab fa-instagram"></i></a>
-               <a href="" class="social_github"><i class="fab fa-github"></i></a>
+               <a href="https://www.facebook.com/dibas.kashyap" class="social_facebook"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://www.instagram.com/dib.kb/?hl=en" class="social_instagram"><i class="fab fa-instagram"></i></a>
+               <a href="https://github.com/dibkb/House-Price-Prediction-Web-App" class="social_github"><i class="fab fa-github"></i></a>
             </div>
       </div>
    </div>
-
-   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="/static/js/result.js"></script>
 </body>
 </html>

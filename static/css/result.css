@@ -52,12 +52,26 @@ li,a{
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    /* animation */
-   animation-name:reveal;
+   /* animation-name:reveal;
    animation-duration: 6.9s;
    animation-timing-function: linear;
    animation-delay: .9s;
    animation-fill-mode: forwards;
-   opacity: 0;  
+   opacity: 0;   */
+}
+.result::before{
+   content: '$ ';
+   margin-right: 3px;
+   background: -webkit-linear-gradient(0deg,#D74343, #DE7859);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+}
+.user_name{
+   background: -webkit-linear-gradient(0deg,#D74343, #DE7859);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
 }
 
 /* Button */
@@ -178,7 +192,7 @@ li,a{
 
    .result{
       /* flex-basis: 47%; */
-      font-size: 17.39vw;
+      font-size: 15.39vw;
       text-align: center;
       margin: 0 auto;
 
