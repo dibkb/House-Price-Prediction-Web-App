@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import render_template, url_for,request
 from datetime import datetime
 import pickle
-
+import os
 import numpy as np
 
 
@@ -15,9 +15,9 @@ app.config['SECRET_KEY'] = 'u23t4y2g4hj323e32xi4y234234bk3r54a*43uyy4d'
 
 #comment this part in development
 
-# uri = os.getenv("DATABASE_URL")  
-# if uri.startswith("postgres://"):
-#     uri = uri.replace("postgres://", "postgresql://", 1)
+uri = os.getenv("DATABASE_URL")  
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
 
 
 
@@ -54,13 +54,7 @@ def home():
 @app.route('/form',methods = ['GET','POST'])
 def form():
    if request.method == 'POST':
-      # data = {
-      # "name" : [request.form['name']],
-      # "house_age": [request.form['house_age']],
-      # "rooms":request.form['rooms'],
-      # "bed_rooms":request.form['bed_rooms'],
-      # "area_income":request.form['area_income'],
-      # "area_population":[request.form['bed_rooms']]}
+
       
       # append the data to dictionary
       user = User(name = request.form['name'])
@@ -91,13 +85,7 @@ def form():
 @app.route('/form_mobile',methods = ['GET','POST'])
 def formMobile():
    if request.method == 'POST':
-      # data = {
-      # "name" : [request.form['name']],
-      # "house_age": [request.form['house_age']],
-      # "rooms":request.form['rooms'],
-      # "bed_rooms":request.form['bed_rooms'],
-      # "area_income":request.form['area_income'],
-      # "area_population":[request.form['bed_rooms']]}
+
       
       # append the data to dictionary
       user = User(name = request.form['name'])
