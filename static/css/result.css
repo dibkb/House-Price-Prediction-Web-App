@@ -154,12 +154,17 @@ li,a{
 .disclamair p a{
    font-weight: 600;
 }
+.disclamair p a:hover,.disclamair p a:focus{
+   text-decoration: underline;
+}
 .social_container >*{
    margin-left: 4.5vw;
    font-size: 1.5vw;
 
 }
 .social_container{
+   /* transition */
+   transition: .369s 0.1s ease-in;
    /* animation */
    animation-name:bottom_load;
    animation-duration: 1.2s;
@@ -168,8 +173,11 @@ li,a{
    animation-fill-mode: forwards;
    opacity: 0
    }
-
-
+   .social_container i:hover{
+      filter: brightness(118%);
+      transform: scale(1.2) rotate(360deg); 
+   }
+   
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px){
@@ -225,6 +233,9 @@ li,a{
    .disclamair p{
       font-size: 2.89vw;
       margin-bottom: 3%;
+   }
+   .disclamair p a:hover,.disclamair p a:focus{
+      text-decoration: overline;
    }
    .social_container{
       width: 100%;

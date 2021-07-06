@@ -11,16 +11,17 @@ model = pickle.load(open('pickle/house.pkl', 'rb'))
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'u23t4y2g4hj1ygh4i4y234234bkj3juy43uyy4d'
+app.config['SECRET_KEY'] = 'u23t4y2g4hj323e32xi4y234234bk3r54a*43uyy4d'
 
 #comment this part in development
+
 # uri = os.getenv("DATABASE_URL")  
 # if uri.startswith("postgres://"):
 #     uri = uri.replace("postgres://", "postgresql://", 1)
 
 
 
-ENV = 'dev'
+ENV = 'production'
 
 if ENV == 'dev':
    app.debug = True
@@ -125,4 +126,4 @@ def formMobile():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
