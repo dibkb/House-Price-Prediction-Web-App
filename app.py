@@ -6,10 +6,6 @@ import pickle
 import os
 import numpy as np
 
-
-model = pickle.load(open('pickle/house.pkl', 'rb'))
-
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'u23t4y2g4hj323e32xi4y234234bk3r54a*43uyy4d'
 
@@ -19,7 +15,9 @@ uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
-
+#load the preprocessor and model
+scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
+regr = pickle.load(open('pickle/svr.pkl', 'rb'))
 
 ENV = 'production'
 
@@ -73,10 +71,7 @@ def form():
       ]).reshape(1,-1)
       
       #grab only the integer value
-      pred = int(model.predict(data)[0])
-
-      print(data)
-
+      pred = np.expm1(regr.predict(scaler.transform(data)))[0]
       return render_template('result.html',pred = pred,name = request.form['name'])
    return render_template('form.html')
 
@@ -104,10 +99,8 @@ def formMobile():
       ]).reshape(1,-1)
       
       #grab only the integer value
-      pred = int(model.predict(data)[0])
-
-      print(data)
-
+      #grab only the integer value
+      pred = np.expm1(regr.predict(scaler.transform(data)))[0]
       return render_template('result.html',pred = pred,name = request.form['name'])
    return render_template('form(mobile).html')
 
