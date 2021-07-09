@@ -19,7 +19,7 @@ if uri.startswith("postgres://"):
 scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
 regr = pickle.load(open('pickle/svr.pkl', 'rb'))
 
-ENV = 'production'
+ENV = 'prod'
 
 if ENV == 'dev':
    app.debug = True
